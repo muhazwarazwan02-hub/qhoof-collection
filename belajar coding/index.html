@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Online Saya</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins', sans-serif;
+        }
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+        }
+        /* Header / Navbar */
+        header {
+            background-color: #075e54;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            font-size: 1.8rem;
+        }
+        header p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        /* Container Produk */
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        /* Card Produk */
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+        .product-info {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .product-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .product-price {
+            color: #e54245;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+        }
+        .product-desc {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+        /* Tombol Beli WhatsApp */
+        .btn-wa {
+            background-color: #25d366;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+            transition: background 0.2s;
+        }
+        .btn-wa:hover {
+            background-color: #128c7e;
+        }
+        body {
+    /* Ganti 'logo.png' dengan nama file logo Anda beserta formatnya (png/jpg) */
+    background-image: url('qhoof collection.jpeg'); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover; /* atau 'cover' jika ingin memenuhi layar */
+}
+
+.product-card {
+    background-color: white !important;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    color:#333; /* tambahkan ini */
+}.welcome-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    transition: opacity 0.5s ease;
+    opacity: 1;
+}
+.welcome-box {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+.welcome-box h2 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.welcome-box p {
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+.welcome-btn {
+    background-color: #128c7e;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+}
+.welcome-btn:hover {
+    background-color: #0b695e;
+}
+    </style>
+</head>
+<body>
+<!-- HALAMAN PERTAMA UCAPAN SELAMAT DATANG -->
+<div id="welcomeScreen" class="welcome-overlay">
+    <div class="welcome-box">
+        <h2>Selamat Datang! ✨</h2>
+        <p>Terima kasih telah berkunjung ke <strong>Qhoof Collection</strong>. Temukan produk jubah dan pasmina premium terbaik kami di sini.</p>
+        
+        <!-- BAGIAN TOMBOL YANG SUDAH DIPERBAIKI -->
+        <button class="welcome-btn" onclick="document.getElementById('welcomeScreen').style.opacity='0'; setTimeout(function(){ document.getElementById('welcomeScreen').style.display='none'; }, 500);">Masuk ke Toko</button>
+    </div>
+</div>
+    <header>
+        <h1>🛍️ Selamat Datang Di Qhoof collection</h1>
+        <p>Pesan Mudah & Cepat Langsung via WhatsApp!</p>
+    </header>
+
+    <div class="container">
+        <div class="product-grid">
+
+            <!-- PRODUK 1 -->
+            <div class="product-card">
+                <img src="images.jpeg" class="product-image">
+                <div class="product-info">
+                    <div class="product-title">Pasmina ceruty</div>
+                    <div class="product-price">Rp 50.000</div>
+                    <div class="product-desc"> Bahan lembut dan nyaman di pakai.</div>
+                    <button class="btn-wa" onclick="orderProdukLain('pasmina ceruty', '50.000')">Beli via WhatsApp 📲</button>
+                </div>
+            </div>
+
+            <!-- PRODUK 2 -->
+<div class="product-card">
+    <img src="Jubah-Pria-Premium-Black.jpg" class="product-image"> 
+    <div class="product-info">
+        <div class="product-title">Jubah Qhoof</div>
+        <div class="product-price" id="price-jubah">Rp 200.000</div>
+        <div class="product-desc">Bahan Cotton Combed 30s adem dan nyerap keringat</div>
+        
+        <!-- Pilihan Ukuran dengan harga masing-masing -->
+        <div class="size-selection" style="margin: 10px 0; text-align: left;">
+            <label for="size-jubah" style="font-size: 14px; font-weight: bold;">Pilih Ukuran: </label>
+            <select id="size-jubah" onchange="updateHargaJubah()" style="padding: 5px; border-radius: 4px;">
+                <option value="M" data-harga="190.000">M (190.000)</option>
+                <option value="L" data-harga="200.000">L (200.000)</option>
+                <option value="XL" data-harga="210.000">XL (210.000)</option>
+            </select>
+        </div>
+
+        <!-- Tombol WhatsApp memanggil fungsi khusus Jubah -->
+        <button class="btn-wa" onclick="orderJubahWA()">Beli via WhatsApp</button>
+    </div>
+</div>
+
+            <!-- <!-- PRODUK 3 --> -->
+<div class="product-card">
+    <!-- Gambar yang sudah diperbaiki tulisannya -->
+    <img src="images (1).jpeg" class="product-image">
+    
+    <div class="product-info">
+        <div class="product-title">Pasmina Kimar</div>
+        <div class="product-price">Rp 50.000</div>
+        <div class="product-desc">Bahan lembut</div>
+        
+        <!-- Tombol WhatsApp khusus Pasmina -->
+        <button class="btn-wa" onclick="orderProdukLain('Pasmina Kimar', '50.000')">Beli via WhatsApp</button>
+    </div>
+</div>
+
+        </div>
+    </div>
+
+    <script>
+// 1. Deklarasi Nomor WhatsApp Toko Anda
+var nomorWA = "6281545556424"; 
+
+// 2. Fungsi untuk Jubah (Pakai Pilihan Ukuran)
+function orderJubahWA() {
+    var select = document.getElementById("size-jubah");
+    var size = select.value;
+    var harga = select.options[select.selectedIndex].getAttribute("data-harga");
+    
+    var teksPesan = "Halo admin, saya mau pesan:\n" +
+                    "- Produk: Jubah Qhoof\n" +
+                    "- Ukuran: " + size + "\n" +
+                    "- Harga: Rp " + harga + "\n\n" +
+                    "Apakah produk ini masih tersedia?";
+                    
+    var urlWA = "https://api.whatsapp.com/send?phone=" + nomorWA + "&text=" + encodeURIComponent(teksPesan);
+    window.open(urlWA, '_blank');
+}
+
+// 3. Fungsi untuk Pasmina (Tanpa Pilihan Ukuran)
+function orderProdukLain(namaProduk, hargaProduk) {
+    var teksPesan = "Halo admin, saya mau pesan:\n" +
+                    "- Produk: " + namaProduk + "\n" +
+                    "- Harga: Rp " + hargaProduk + "\n\n" +
+                    "Apakah produk ini masih tersedia?";
+                    
+    var urlWA = "https://api.whatsapp.com/send?phone=" + nomorWA + "&text=" + encodeURIComponent(teksPesan);
+    window.open(urlWA, '_blank');
+}
+    </script>
+
+</body>
+</html>
